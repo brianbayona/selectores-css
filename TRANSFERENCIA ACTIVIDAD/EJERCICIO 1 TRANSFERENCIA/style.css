@@ -1,0 +1,12 @@
+div p {
+      color: blue;
+      font-weight: bold;
+}
+
+h2+p {
+      text-decoration: underline;
+}
+
+h2~p {
+      font-style: italic;
+}
