@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales del menú */
+.header {
+    background-color: #1a1a1a;
+    padding: 15px;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    /* SELECTOR DE DESCENDENCIA */
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+/* SELECTOR DE HIJO DIRECTO */
+/* Afecta solo al enlace hijo directo de cada li */
+.item > a {
+    background-color: #333;
+}
+
+/* SELECTOR DE HERMANO ADYACENTE */
+/* Afecta al segundo elemento (el que viene justo después del primero) */
+.item:first-child + .item a {
+    background-color: #0059ff;
+}
+
+/* SELECTOR DE HERMANOS GENERALES */
+/* Afecta a todos los que vienen después del segundo */
+.item:nth-child(2) ~ .item a {
+    opacity: 0.7;
+}
+
+/* Hover */
+.menu a:hover {
+    background-color: #ff9800;
+    color: black;
+    opacity: 1;
+}
